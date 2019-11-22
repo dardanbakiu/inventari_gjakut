@@ -14,8 +14,12 @@ app.use(ballina)
 app.use(depozita)
 app.use(lista_dhuruesve)
 app.use(lista_marresve)
+
 app.use(regjistro_dhurues)
+app.post(regjistro_dhurues)
+
 app.use(regjistro_marres)
+app.post(regjistro_marres)
 
 app.use((req,res)=>{
     res.status(404).render('404');
