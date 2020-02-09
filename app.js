@@ -1,27 +1,52 @@
-const express = require('express')
-const app = express()
+const express = require('express');
+const app = express();
+const path = require('path');
+const ballinaRoute = require('./router/ballinaRoute');
+const depozitaRoute = require('./router/depozitaRoute');
+const listaDhuruesveRoute = require('./router/listaDhuruesveRoute');
+const listaMarrsveRoute = require('./router/listaMarresveRoute');
+const profiliDhuruesitRoute = require('./router/profiliDhuruesitRoute');
+const regjistrohuAdminRoute = require('./router/regjistrohuAdminRoute');
+const regjistrohuDhuruesRoute = require('./router/regjistrohuDhuruesRoute');
+const kyquAdminRoute = require('./router/kyquAdminRoute');
+const kyquDhuruesRoute = require('./router/kyquDhuruesRoute');
+const shtoDhuruesRoute = require('./router/shtoDhuruesRoute');
+const shtoMarresRoute = require('./router/shtoMarresRoute');
+const db = require("./database");
 
-const ballina = require('./routes/ballina_route') 
-const depozita = require('./routes/depozita_route')
-const lista_dhuruesve = require('./routes/lista_dhuruesve_route')
-const lista_marresve = require('./routes/lista_marresve_route')
-const regjistro_dhurues = require('./routes/regjistro_dhurues_route')
-const regjistro_marres = require('./routes/regjistro_marres_route')
 
-app.set('view engine', 'ejs')
+app.use('/', express.static('static'));
+app.set('view engine', 'ejs');
+app.set('views', 'views');
+var bodyParser = require("body-parser");
+app.use(bodyParser.urlencoded({ extended: false }));
 
-app.use(ballina)
-app.use(depozita)
-app.use(lista_dhuruesve)
-app.use(lista_marresve)
+// db.execute('Select * from users')
+// .then(result => {
+//     console.log(result);
+// })
+// .catch(err => {
+//     console.log(err);
+// });
 
-app.use(regjistro_dhurues)
-app.post(regjistro_dhurues)
+global.admin = {
+    username : "admin",
+    password : "admin",
+    logged : false
+}
 
-app.use(regjistro_marres)
-app.post(regjistro_marres)
 
-app.use((req,res)=>{
-    res.status(404).render('404');
-});
-app.listen(3000)
+app.use('/', ballinaRoute.route);
+app.use('/', depozitaRoute.route);
+app.use('/', listaDhuruesveRoute.route);
+app.use('/', listaMarrsveRoute.route);
+app.use('/', profiliDhuruesitRoute.route);
+app.use('/', regjistrohuAdminRoute.route);
+app.use('/', regjistrohuDhuruesRoute.route);
+app.use('/',kyquAdminRoute.route);
+app.use('/',kyquDhuruesRoute.route);
+app.use('/', shtoDhuruesRoute.route);
+app.use('/', shtoMarresRoute.route);
+
+
+app.listen(3000);   

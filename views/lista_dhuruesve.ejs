@@ -1,18 +1,99 @@
+<!DOCTYPE html>
 <html>
-<head>
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
-</head>
-<body>
-
-<!-- kena mi regjistru ata qe japin gjak edhe ata qe marrin
-    tab tjeter : blood donors , blood recievers,resourves
+    <head>
+         <title>Dhuro gjak!</title>
+         <meta name="viewport" content="width=device-width, initial-scale=1">
+         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+         <link rel="stylesheet" href="https://cdnjs.couldflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+         <link rel="stylesheet" href="navAndFooter.css">
+         <link href="style.css" rel="stylesheet"/>
+         <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+         
+         
+     </head>
+           <body>
+            <%- include ('partials/navbar.ejs') %> 
+<br>
+<br>
+<br>
+<!-- divi i par i permban krejt grupet e gjakut -->
+<div class="container" > 
+    <!-- qeky div asht rreshti i pare -->
     
-
--->
-    <% include ./partials/navbar.ejs %>
-
+    <div  class="row">
+      <div class="col-md-4"></div>
+      <div class="col-md-2">
+        <label class="label label-danger"> A+</label>
+        <input type="radio" name="optradio" value="A+"> 
+      </div>
+    
+      <div class="col-md-6">
+        <label class="label label-danger">A-</label>
+        <input type="radio" name="optradio" value="A-"> 
+      </div>
+  
+    </div> <br>
+    
+    <div  class="row">
+      <div class="col-md-4"></div>
+      <div class="col-md-2">
+        <label class="label label-danger">B+</label>
+        <input type="radio" name="optradio" value="B+"> 
+      </div>
+  
+      <div class="col-md-6">
+        <label class="label label-danger">B-</label>
+        <input type="radio" name="optradio" value="B-"> 
+      </div>
+      </div> <br>
+      <div  class="row">
+        <div class="col-md-4"></div>
+      <div class="col-md-2">
+          <label class="label label-danger">AB+</label>
+          <input type="radio" name="optradio" value="AB+"> 
+        </div>
+    
+        <div class="col-md-6">
+          <label class="label label-danger">AB-</label>
+          <input type="radio" name="optradio" value="AB-"> 
+        </div>
+  
+    </div><br>
+    <div  class="row">
+      <div class="col-md-4"></div>
+      <div class="col-md-2">
+        <label class="label label-danger">O+</label>
+        <input type="radio" name="optradio" value="O+"> 
+      </div>
+  
+      <div class="col-md-6">
+        <label class="label label-danger">O-</label>
+        <input type="radio" name="optradio" value="O-"> 
+      </div>
+  </div>
+  <br>
+  <div class="row">
+    <div class="col-md-5"></div>
+    <div> <input type="button" class="btn btn-danger"  value="Kërko"> </div> 
+  </div>
+</div>  
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<div class="container">
+  <section style="height:80px;"></section>
+  
+   <!----------- Footer ------------>
+   <%- include ('partials/footer.ejs') %>  </div>
 </body>
 </html>
