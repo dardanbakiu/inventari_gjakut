@@ -30,9 +30,9 @@ app.use(bodyParser.urlencoded({ extended: false }));
 // });
 
 global.admin = {
-    username : "admin",
-    password : "admin",
-    logged : false
+    username: "admin",
+    password: "admin",
+    logged: false
 }
 
 
@@ -43,8 +43,8 @@ app.use('/', listaMarrsveRoute.route);
 app.use('/', profiliDhuruesitRoute.route);
 app.use('/', regjistrohuAdminRoute.route);
 app.use('/', regjistrohuDhuruesRoute.route);
-app.use('/',kyquAdminRoute.route);
-app.use('/',kyquDhuruesRoute.route);
+app.use('/', kyquAdminRoute.route);
+app.use('/', kyquDhuruesRoute.route);
 app.use('/', shtoDhuruesRoute.route);
 app.use('/', shtoMarresRoute.route);
 

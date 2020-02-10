@@ -1,142 +1,149 @@
 <!DOCTYPE html>
 <html>
-    <head>
-         <title>Dhuro gjak!</title>
-         <meta name="viewport" content="width=device-width, initial-scale=1">
-         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-         <link rel="stylesheet" href="https://cdnjs.couldflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-         <link rel="stylesheet" href="navAndFooter.css">
-         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-         <link href="style.css" rel="stylesheet"/>
-         <meta charset="UTF-8">
+
+<head>
+  <title>Dhuro gjak!</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdnjs.couldflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <link rel="stylesheet" href="navAndFooter.css">
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <link href="style.css" rel="stylesheet" />
+  <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-         
-         
-     </head>
-           <body>
-            <%- include ('partials/navbar.ejs') %> 
+
+
 </head>
+
 <body>
-<!-- qetu posht asht kodi komplet veq per shto dhurues: -->
-<center>
+  <%- include ('partials/navbar.ejs') %>
+  </head>
+
+  <body>
+    <!-- qetu posht asht kodi komplet veq per shto dhurues: -->
+    <center>
 
 
-<h1>Shto Dhrues</h1>
+      <h1>Shto Dhrues</h1>
 
-</center> <br><br>
-<div class="col-md-4"></div>
-<div class="col-md-4">
-  <form action="shto_dhurues_form" method="POST">
-    <div class="form-group">
-    <label for="first_name">Emri</label>
-    <input type="text" class="form-control" id="first_name" name="shto_dhurues_emri">
-    </div>
-    <div class="form-group">
-      <label for="last_name">Mbiemri</label>
-      <input type="text" class="form-control" id="last_name" name="shto_dhurues_mbiemri">
-      </div><div class="form-group">
-        <label for="last_name">Email</label>
-        <input type="text" class="form-control" id="last_name" name="shto_dhurues_email">
+    </center> <br><br>
+    <div class="col-md-4"></div>
+    <div class="col-md-4">
+      <form action="shto_dhurues_form" method="POST">
+        <div class="form-group">
+          <label for="first_name">Emri</label>
+          <input type="text" class="form-control" id="first_name" name="shto_dhurues_emri">
         </div>
-     
+        <div class="form-group">
+          <label for="last_name">Mbiemri</label>
+          <input type="text" class="form-control" id="last_name" name="shto_dhurues_mbiemri">
+        </div>
+        <div class="form-group">
+          <label for="last_name">Email</label>
+          <input type="text" class="form-control" id="last_name" name="shto_dhurues_email">
+        </div>
+
 
         <!-- ----------------------------------------------- -->
-        
+
         <label for="last_name">Grupi Gjakut</label>
-       <div class="row">
-        <div class="form-check col-md-1">
-          <label class="form-check-label">
-            <input type="radio" class="form-check-input" value="A-" name="shto_dhurues_gr_gjakut">A-
-          </label>
-        </div>
-        <div class="form-check">
-          <div class="col-md-1">
-          <label class="form-check-label">
-            <input type="radio" class="form-check-input" value="B+" name="shto_dhurues_gr_gjakut">B+
-          </label>
-        </div>
-        <div class="form-check">
-          <div class="col-md-1">
-          
-          <label class="form-check-label">
-            <input type="radio" class="form-check-input" value="B-" name="shto_dhurues_gr_gjakut">B-
-          </label>
-        </div>
-        <div class="form-check">
-          <div class="col-md-1">
-          <label class="form-check-label">
-            <input type="radio" class="form-check-input" value="AB+" name="shto_dhurues_gr_gjakut">AB+
-          </label>
-        </div>
-        <div class="form-check col-md-1">
-          <label class="form-check-label">
-            <input type="radio" class="form-check-input" value="AB-" name="shto_dhurues_gr_gjakut">AB-
-          </label>
-        </div>
-       <div class="form-check">
-        <div class="col-md-1">
-          <label class="form-check-label">
-            <input type="radio" class="form-check-input" value="O+" name="shto_dhurues_gr_gjakut">O+
-          </label>
-        </div>
-        <div class="form-check">
-          <div class="col-md-1">
-          <label class="form-check-label">
-            
-            <input type="radio" class="form-check-input" value="O-" name="shto_dhurues_gr_gjakut">O-
-          </label>
-        </div></div></div>
-      
-        <!-- ------------------------------------------------ -->
-      <br><br> <br>
-      <div class="col-md-12">
-        <div class="form-group ">
-          <label for="last_name">Kontakti</label>
-          <input type="text" class="form-control" id="last_name" name="shto_dhurues_kontakti">
+        <div class="row">
+          <div class="form-check col-md-1">
+            <label class="form-check-label">
+              <input type="radio" class="form-check-input" value="A-" name="shto_dhurues_gr_gjakut">A-
+            </label>
           </div>
-          <div class="form-group">
-            <label for="last_name">Sasia e dhuruar (ml)</label>
-            <input type="number" class="form-control" id="last_name" name="shto_dhurues_sasia">
+          <div class="form-check">
+            <div class="col-md-1">
+              <label class="form-check-label">
+                <input type="radio" class="form-check-input" value="B+" name="shto_dhurues_gr_gjakut">B+
+              </label>
             </div>
-    <input value="Shto" type="submit" class="btn  btn-danger btn-default">
-    </form>
-</div>
-</div>
+            <div class="form-check">
+              <div class="col-md-1">
 
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
+                <label class="form-check-label">
+                  <input type="radio" class="form-check-input" value="B-" name="shto_dhurues_gr_gjakut">B-
+                </label>
+              </div>
+              <div class="form-check">
+                <div class="col-md-1">
+                  <label class="form-check-label">
+                    <input type="radio" class="form-check-input" value="AB+" name="shto_dhurues_gr_gjakut">AB+
+                  </label>
+                </div>
+                <div class="form-check col-md-1">
+                  <label class="form-check-label">
+                    <input type="radio" class="form-check-input" value="AB-" name="shto_dhurues_gr_gjakut">AB-
+                  </label>
+                </div>
+                <div class="form-check">
+                  <div class="col-md-1">
+                    <label class="form-check-label">
+                      <input type="radio" class="form-check-input" value="O+" name="shto_dhurues_gr_gjakut">O+
+                    </label>
+                  </div>
+                  <div class="form-check">
+                    <div class="col-md-1">
+                      <label class="form-check-label">
+
+                        <input type="radio" class="form-check-input" value="O-" name="shto_dhurues_gr_gjakut">O-
+                      </label>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- ------------------------------------------------ -->
+                <br><br> <br>
+                <div class="col-md-12">
+                  <div class="form-group ">
+                    <label for="last_name">Kontakti</label>
+                    <input type="text" class="form-control" id="last_name" name="shto_dhurues_kontakti">
+                  </div>
+                  <div class="form-group">
+                    <label for="last_name">Sasia e dhuruar (ml)</label>
+                    <input type="number" class="form-control" id="last_name" name="shto_dhurues_sasia">
+                  </div>
+                  <input value="Shto" type="submit" class="btn  btn-danger btn-default">
+      </form>
+    </div>
+    </div>
+
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
 
 
 
-<div class="container">
-  <section style="height:80px;"></section>
-  
-   <!----------- Footer ------------>
-   <%- include ('partials/footer.ejs') %>  
-</div>
-</body>
+    <div class="container">
+      <section style="height:80px;"></section>
+
+      <!----------- Footer ------------>
+      <%- include ('partials/footer.ejs') %>
+    </div>
+  </body>
+
 </html>

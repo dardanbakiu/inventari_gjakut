@@ -1,99 +1,134 @@
 <!DOCTYPE html>
 <html>
-    <head>
-         <title>Dhuro gjak!</title>
-         <meta name="viewport" content="width=device-width, initial-scale=1">
-         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-         <link rel="stylesheet" href="https://cdnjs.couldflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-         <link rel="stylesheet" href="navAndFooter.css">
-         <link href="style.css" rel="stylesheet"/>
-         <meta charset="UTF-8">
+
+<head>
+  <title>Dhuro gjak!</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdnjs.couldflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="navAndFooter.css">
+  <link href="style.css" rel="stylesheet" />
+  <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-         
-         
-     </head>
-           <body>
-            <%- include ('partials/navbar.ejs') %> 
-<br>
-<br>
-<br>
-<!-- divi i par i permban krejt grupet e gjakut -->
-<div class="container" > 
+
+
+</head>
+
+<body>
+  <%- include ('partials/navbar.ejs') %>
+  <center>
+    <div class="container">
+      <table class="table">
+        <thead>
+          <tr>
+            <th scope="col ">Nr</th>
+            <th scope="col">Emri</td>
+            <th scope="col">Mbiemri</td>
+            <th scope="col">Email</td>
+            <th scope="col">Grupi i Gjakut</td>
+            <th scope="col"> Kontakti</td>
+            <th scope="col">Sasia</td>
+          </tr>
+        </thead>
+        <tbody>
+          <% for (var i = 0; i < rows.length -1; i++) { %>
+          <tr>
+            <th scope="row "><%= i+1 %></th>
+            <td><%= rows[i].emri %></td>
+            <td><%= rows[i].mbiemri %></td>
+            <td><%= rows[i].email %></td>
+            <td><%= rows[i].grgjakut %></td>
+            <td><%= rows[i].kontakti %></td>
+            <td><%= rows[i].sasia %></td>
+          </tr>
+
+          <% } %>
+        </tbody>
+      </table>
+    </div>
+  </center>
+  <br>
+  <br>
+  <br>
+  <!-- divi i par i permban krejt grupet e gjakut -->
+  <div class="container">
     <!-- qeky div asht rreshti i pare -->
-    
-    <div  class="row">
+
+    <div class="row">
       <div class="col-md-4"></div>
       <div class="col-md-2">
         <label class="label label-danger"> A+</label>
-        <input type="radio" name="optradio" value="A+"> 
+        <input type="radio" name="optradio" value="A+">
       </div>
-    
+
       <div class="col-md-6">
         <label class="label label-danger">A-</label>
-        <input type="radio" name="optradio" value="A-"> 
+        <input type="radio" name="optradio" value="A-">
       </div>
-  
+
     </div> <br>
-    
-    <div  class="row">
+
+    <div class="row">
       <div class="col-md-4"></div>
       <div class="col-md-2">
         <label class="label label-danger">B+</label>
-        <input type="radio" name="optradio" value="B+"> 
+        <input type="radio" name="optradio" value="B+">
       </div>
-  
+
       <div class="col-md-6">
         <label class="label label-danger">B-</label>
-        <input type="radio" name="optradio" value="B-"> 
+        <input type="radio" name="optradio" value="B-">
       </div>
-      </div> <br>
-      <div  class="row">
-        <div class="col-md-4"></div>
+    </div> <br>
+    <div class="row">
+      <div class="col-md-4"></div>
       <div class="col-md-2">
-          <label class="label label-danger">AB+</label>
-          <input type="radio" name="optradio" value="AB+"> 
-        </div>
-    
-        <div class="col-md-6">
-          <label class="label label-danger">AB-</label>
-          <input type="radio" name="optradio" value="AB-"> 
-        </div>
-  
+        <label class="label label-danger">AB+</label>
+        <input type="radio" name="optradio" value="AB+">
+      </div>
+
+      <div class="col-md-6">
+        <label class="label label-danger">AB-</label>
+        <input type="radio" name="optradio" value="AB-">
+      </div>
+
     </div><br>
-    <div  class="row">
+    <div class="row">
       <div class="col-md-4"></div>
       <div class="col-md-2">
         <label class="label label-danger">O+</label>
-        <input type="radio" name="optradio" value="O+"> 
+        <input type="radio" name="optradio" value="O+">
       </div>
-  
+
       <div class="col-md-6">
         <label class="label label-danger">O-</label>
-        <input type="radio" name="optradio" value="O-"> 
+        <input type="radio" name="optradio" value="O-">
       </div>
+    </div>
+    <br>
+    <div class="row">
+      <div class="col-md-5"></div>
+      <div> <input type="button" class="btn btn-danger" value="Kërko"> </div>
+    </div>
   </div>
   <br>
-  <div class="row">
-    <div class="col-md-5"></div>
-    <div> <input type="button" class="btn btn-danger"  value="Kërko"> </div> 
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <div class="container">
+    <section style="height:80px;"></section>
+
+    <!----------- Footer ------------>
+    <%- include ('partials/footer.ejs') %>
   </div>
-</div>  
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<div class="container">
-  <section style="height:80px;"></section>
-  
-   <!----------- Footer ------------>
-   <%- include ('partials/footer.ejs') %>  </div>
 </body>
+
 </html>

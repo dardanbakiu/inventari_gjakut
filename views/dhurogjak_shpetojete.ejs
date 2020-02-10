@@ -1,106 +1,120 @@
 <!DOCTYPE html>
 <html>
-    <head>
-         <title>Dhuro gjak!</title>
-         <meta name="viewport" content="width=device-width, initial-scale=1">
-         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-         <link rel="stylesheet" href="https://cdnjs.couldflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-         <link rel="stylesheet" href="navAndFooter.css">
-         <link href="style.css" rel="stylesheet"/>
-         <meta charset="UTF-8">
+
+<head>
+  <title>Dhuro gjak!</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdnjs.couldflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="navAndFooter.css">
+  <link href="style.css" rel="stylesheet" />
+  <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-        
-        
-     </head>
-           <body>
-             
-            <%- include ('partials/navbar.ejs') %> 
 
-     <br> <br>  <br> 
-      
-     <div class="padding">
-         <div class="container">
-             <div class="row">
-                 <div class="col-sm-6">
 
-                   <center>  <img src="https://nhsbtdbe.blob.core.windows.net/umbraco-assets-corp/7745/pod-blood-icon.png"> </center>
-                 </div>
-                 <div class="col-md-5">
-                     <h2>Dhuro gjak shpeto jete!</h2>
-                     <p class="lead">Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati quod vero architecto dicta mollitia laboriosam soluta totam eos quasi corporis. Nostrum, labore autem enim accusantium numquam amet quod eligendi perspiciatis.</p>
-                 </div>
-             </div>
-         </div>
-     </div>
-     <br>
-     <br>
-     <br>
-    <center>
-        <button id="shfaq" class="btn-danger btn_shfaq">Pse duhet te dhurojme gjak?</button> <br> 
-    </center>
-    <br>
-    <br>
-        <p id="paragrafi" class="container">Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia fugit fugiat nostrum error! Eaque quos iusto corrupti modi quasi nesciunt animi omnis illo vel error. Dolores ab quia quibusdam aspernatur!</p>
-    
-        <script> 
-          $(document).ready(function(){
-            $("#paragrafi").toggle();
-            $("#paragrafi1").toggle();
-            $("#paragrafi2").toggle();
-            $("#paragrafi4").toggle();
-          });
-            </script>
+</head>
 
-    <script> 
-    $("#shfaq").click(function(){
-        $("#paragrafi").toggle();
+<body>
+
+  <%- include ('partials/navbar.ejs') %>
+
+  <br> <br> <br>
+
+  <div class="padding">
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-6">
+
+          <center> <img src="https://nhsbtdbe.blob.core.windows.net/umbraco-assets-corp/7745/pod-blood-icon.png">
+          </center>
+        </div>
+        <div class="col-md-5">
+          <h2>Dhuro gjak shpeto jete!</h2>
+          <p class="lead">Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati quod vero architecto dicta
+            mollitia laboriosam soluta totam eos quasi corporis. Nostrum, labore autem enim accusantium numquam amet
+            quod eligendi perspiciatis.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <br>
+  <br>
+  <br>
+  <center>
+    <button id="shfaq" class="btn-danger btn_shfaq">Pse duhet te dhurojme gjak?</button> <br>
+  </center>
+  <br>
+  <br>
+  <p id="paragrafi" class="container">Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia fugit fugiat
+    nostrum error! Eaque quos iusto corrupti modi quasi nesciunt animi omnis illo vel error. Dolores ab quia quibusdam
+    aspernatur!</p>
+
+  <script>
+    $(document).ready(function () {
+      $("#paragrafi").toggle();
+      $("#paragrafi1").toggle();
+      $("#paragrafi2").toggle();
+      $("#paragrafi4").toggle();
     });
-      </script>
-<br> <br> <br>
-<center>
-    <button id="shfaqe" class="btn-danger btn_shfaq">Kush nuk mund te dhuroj gjak?</button> <br> </center>
-    <br> 
-    <br>
-    <p id="paragrafi1" class="container">Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia fugit fugiat nostrum error! Eaque quos iusto corrupti modi quasi nesciunt animi omnis illo vel error. Dolores ab quia quibusdam aspernatur!</p>
+  </script>
 
-<script> 
-$("#shfaqe").click(function(){
-    $("#paragrafi1").toggle();
-});
+  <script>
+    $("#shfaq").click(function () {
+      $("#paragrafi").toggle();
+    });
   </script>
   <br> <br> <br>
   <center>
-    <button id="shfaq1" class="btn-danger btn_shfaq">Grupet e gjakut</button>  </center>
-    <br>
-    <br>
-    <p id="paragrafi2" class="container">Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia fugit fugiat nostrum error! Eaque quos iusto corrupti modi quasi nesciunt animi omnis illo vel error. Dolores ab quia quibusdam aspernatur!</p>
+    <button id="shfaqe" class="btn-danger btn_shfaq">Kush nuk mund te dhuroj gjak?</button> <br> </center>
+  <br>
+  <br>
+  <p id="paragrafi1" class="container">Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia fugit fugiat
+    nostrum error! Eaque quos iusto corrupti modi quasi nesciunt animi omnis illo vel error. Dolores ab quia quibusdam
+    aspernatur!</p>
 
-<script> 
-$("#shfaq1").click(function(){
-    $("#paragrafi2").toggle();
-});
+  <script>
+    $("#shfaqe").click(function () {
+      $("#paragrafi1").toggle();
+    });
   </script>
   <br> <br> <br>
-  
-    <center>
-        <button id="shfaq3" class="btn-danger btn_shfaq">Procesi i dhurimit te gjakut</button> <br> </center>
-        <br>
-        <br>
-        <p id="paragrafi4" class="container">Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia fugit fugiat nostrum error! Eaque quos iusto corrupti modi quasi nesciunt animi omnis illo vel error. Dolores ab quia quibusdam aspernatur!</p>
-    
-    <script> 
-    $("#shfaq3").click(function(){
-        $("#paragrafi4").toggle();
+  <center>
+    <button id="shfaq1" class="btn-danger btn_shfaq">Grupet e gjakut</button> </center>
+  <br>
+  <br>
+  <p id="paragrafi2" class="container">Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia fugit fugiat
+    nostrum error! Eaque quos iusto corrupti modi quasi nesciunt animi omnis illo vel error. Dolores ab quia quibusdam
+    aspernatur!</p>
+
+  <script>
+    $("#shfaq1").click(function () {
+      $("#paragrafi2").toggle();
     });
-      </script>
-      <div class="container">
-        <section style="height:80px;"></section>
-        
-         <!----------- Footer ------------>
-         <%- include ('partials/footer.ejs') %>  
-</div>
-      </body>   
- </html>
+  </script>
+  <br> <br> <br>
+
+  <center>
+    <button id="shfaq3" class="btn-danger btn_shfaq">Procesi i dhurimit te gjakut</button> <br> </center>
+  <br>
+  <br>
+  <p id="paragrafi4" class="container">Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia fugit fugiat
+    nostrum error! Eaque quos iusto corrupti modi quasi nesciunt animi omnis illo vel error. Dolores ab quia quibusdam
+    aspernatur!</p>
+
+  <script>
+    $("#shfaq3").click(function () {
+      $("#paragrafi4").toggle();
+    });
+  </script>
+  <div class="container">
+    <section style="height:80px;"></section>
+
+    <!----------- Footer ------------>
+    <%- include ('partials/footer.ejs') %>
+  </div>
+</body>
+
+</html>
