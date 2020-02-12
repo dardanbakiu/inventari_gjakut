@@ -30,6 +30,7 @@ router.post('/kycu_admin_btn', (req, res) => {
 
 router.post('/dil', (req, res) => {
     global.admin.logged = false;
+    global.dhurues = false;
     res.render('dhurogjak_shpetojete');
 });
 

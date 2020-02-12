@@ -34,7 +34,7 @@ router.post("/user_reg", (req, res) => {
 
     db.execute("INSERT INTO users(emri,mbiemri,ditelindja,kontakti,email,password,grgjakut,semundje,tatoo) values('" + reg_user_emri + "','" + reg_user_mbiemri + "','" + reg_user_dtl + "','" + reg_user_kontakti + "','" + reg_user_email + "','" + reg_user_password + "','" + reg_user_gr_gjakut + "','" + reg_user_semundje + "','" + reg_user_tatoo + "')     ")
         .then(() => {
-            res.render('kycu_si_dhurues');
+            res.render('dhurogjak_shpetojete');
         })
         .catch(err => {
             console.log(err);

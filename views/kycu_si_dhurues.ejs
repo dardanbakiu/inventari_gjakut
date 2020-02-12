@@ -27,13 +27,13 @@
       <div class="box">
         <h3> Kyçu si dhurues</h3>
         <br>
-        <form>
+        <form method="POST" action="kycu_dhurues_form">
           <div class="row">
             <div class="col-sm-4"></div>
             <div class="col-sm-4">
               <div class="form-group">
                 <label for="usr">Email:</label>
-                <input type="text" class="form-control" id="usr">
+                <input type="text" class="form-control" id="usr" name="kycu_dhurues_email" >
               </div>
             </div>
             <div class="col-sm-4"></div>
@@ -44,12 +44,17 @@
             <div class="col-sm-4">
               <div class="form-group">
                 <label for="usr">Pasword:</label>
-                <input type="text" class="form-control" id="usr">
+                <input type="password" class="form-control" id="usr" name="kycu_dhurues_pw">
               </div>
 
-              <button type="button" class="btn btn-danger">Kyçu</button>
+              <input type="submit" value="Kyçu" class="btn btn-danger">
+              <h3 style="color:red;"><%= errorStatement %></h3>
         </form>
       </div>
+      
+      <br>
+      <br>
+      
     </center>
   </section>
   <div class="container">

@@ -17,24 +17,28 @@
 
       <ul class="nav navbar-nav navbar-right" href="/">
 
-
+        <% if (global.dhurues  == false) { %>
         <div class="btn-group ">
           <button type="button " class="btn btn-default dropdown-toggle btn-danger" data-toggle="dropdown"
             aria-haspopup="true" aria-expanded="false">
             Regjistrohu <span class="caret"></span>
           </button>
+
+          
           <ul class="dropdown-menu">
             <% if (global.admin.logged == true) { %>
             <li><a href="/regjistrohu_si_administrator">Regjistrohu si administrator</a></li>
             <% } %>
             <li role="separator" class="divider"></li>
-            <% if (global.admin.logged == false) { %>
+            <% if (global.admin.logged == false){ %>
             <li><a href="/regjistrohu_si_dhurues">Regjistrohu si dhurues</a></li>
             <% } %>
           </ul>
+         
         </div>
+        <% } %>
 
-        <% if (global.admin.logged == false) { %>
+        <% if ((global.admin.logged == false) && (global.dhurues == false)){ %>
         <div class="btn-group ">
           <button type="button " class="btn btn-default dropdown-toggle btn-danger" data-toggle="dropdown"
             aria-haspopup="true" aria-expanded="false">
@@ -75,14 +79,17 @@
             <li><a href="/shto_marres"> Shto marrës</a></li>
           </ul>
         </div>
+        
 
         <a href="/depozita"> <button type="button" class="btn btn-default btn-danger navbar-btn">Depozita</button></a>
+        <% } %>
 
+        <% if (global.dhurues  == true) { %>
         <a href="/profili_dhuruesit"> <button type="button"
             class="btn btn-default btn-danger navbar-btn">Profili</button> </a>
+        <% } %>
 
-
-
+          <% if ((global.admin.logged == true) || (global.dhurues == true)) { %>
         <button type="submit" id="btnDil" class="btn btn-default  navbar-btn" form="formaDil"
           value="Submit">Dil</button>
 
