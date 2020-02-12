@@ -36,26 +36,29 @@ router.post('/kycu_dhurues_form', (req, res) => {
             global.tokenProfile.logged = true;
 
 
-            db.query("select emri,mbiemri,kontakti,grgjakut from users where email='" + email + "' and password='" + password + "';", function (err, result, fields) {
+            db.query("select * from users where email='" + email + "' and password='" + password + "';", function (err, result, fields) {
                 if (err) throw err;
-                console.log(result);
+                console.log("qetu  :" +result[0].emri);
 
-                db.query("select sasia from shtodhurues where email='" + email + "' ;", function (err, result2, fields) {
+                
+
+                db.query("select * from shtodhurues where email='" + email + "' ;", function (err, result2, fields) {
                     if (result2.length != 0) {
-                        global.tokenProfile.historia = result2 + " ml";
-                        global.tokenProfile.emri= result.emri ;
-                        global.tokenProfile.mbiemri= result.mbiemri;
-                        global.tokenProfile.kontakti = result.kontakti;
-                        global.tokenProfile.grgjakut = result.grgjakut;
+                        global.tokenProfile.historia = result2[0].sasia + " ml";
+                        global.tokenProfile.emri= result[0].emri ;
+                        global.tokenProfile.mbiemri= result[0].mbiemri ;
+                        global.tokenProfile.kontakti =  result[0].kontakti ;
+                        global.tokenProfile.grgjakut =  result[0].grgjakut ;
+                        console.log("qetuuuuuuu: "+JSON.stringify(result2));
                         
                         res.render('dhurogjak_shpetojete');
                     }
                     else {
                         global.tokenProfile.historia = " 0 ml";
-                        global.tokenProfile.emri= result.emri ;
-                        global.tokenProfile.mbiemri= result.mbiemri;
-                        global.tokenProfile.kontakti = result.kontakti;
-                        global.tokenProfile.grgjakut = result.grgjakut;
+                        global.tokenProfile.emri=  result[0].emri ;
+                        global.tokenProfile.mbiemri=  result[0].mbiemri ;
+                        global.tokenProfile.kontakti =  result[0].kontakti ;
+                        global.tokenProfile.grgjakut =  result[0].grgjakut ;
                         res.render('dhurogjak_shpetojete');
 
                     }

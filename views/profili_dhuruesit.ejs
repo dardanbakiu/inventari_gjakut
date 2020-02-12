@@ -29,18 +29,12 @@
 https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQKdxPDQqphhZ1TBmunufMlePRt4SugXtKJLKRFbW0ECj3fE0q-0A&s
 " alt="Card image">
             <div class="card-img-overlay">
-              <h4 class="card-title">Emri:</h4>
-              <h4 class="card-title">Mbiemri:</h4>
-              <h4 class="card-title">Kontakti:</h4>
-              <h4 class="card-title">Grupi i gjakut:</h4>
-              <h4 class="card-title">Historia:</h4>
-
-              global.tokenProfile.historia = " 0 ml";
-                        global.tokenProfile.emri= result.emri ;
-                        global.tokenProfile.mbiemri= result.mbiemri;
-                        global.tokenProfile.kontakti = result.kontakti;
-                        global.tokenProfile.grgjakut = result.grgjakut;
-                        res.render('dhurogjak_shpetojete');
+              <h4 class="card-title">Emri: <%= emri %></h4>
+              <h4 class="card-title">Mbiemri: <%= mbiemri %></h4>
+              <h4 class="card-title">Kontakti: <%= kontakti %></h4>
+              <h4 class="card-title">Grupi i gjakut: <%= grgjakut %></h4>
+              <h4 class="card-title">Historia:  <%= historia %></h4>
+              
 
             </div>
           </div>
